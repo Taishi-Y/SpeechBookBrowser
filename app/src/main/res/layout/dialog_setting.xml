@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+
+    >
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="20dp">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="speed"
+            android:id="@+id/tv_speed"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+
+        <SeekBar
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seek_bar_speed"
+            android:layout_gravity="center_vertical"
+            android:max="100"
+            android:layout_weight="4"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pitch"
+            android:id="@+id/tv_pitch"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"/>
+
+        <SeekBar
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/seek_bar_pitch"
+            android:layout_gravity="center_vertical"
+            android:max="100"
+            android:layout_weight="4"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
