@@ -40,6 +40,8 @@ public class WebViewClientCallback extends WebViewClient implements TextToSpeech
 	public int speak(String innerText) {
 		Log.d(TAG, "Nailed the JS man!" + innerText);
 
+//		fabPlay.setImageResource(R.drawable.ic_pause_white_24dp);
+
 		pitch = this.myApplication.getGlobalPitch();
 		speed = this.myApplication.getGlobalSpeed();
 
@@ -70,6 +72,7 @@ public class WebViewClientCallback extends WebViewClient implements TextToSpeech
 			@Override
 			public void onClick(View view) {
 				tts.stop();
+				webView.loadUrl("javascript:clearHighlight();");
 				fabPlay.setImageResource(R.drawable.ic_play_arrow_white_24dp);
 			}
 		});
@@ -129,7 +132,7 @@ public class WebViewClientCallback extends WebViewClient implements TextToSpeech
 	String lastClicked = "";
 	
 	void loadTime(String url) {
-			webView.loadUrl("http://cjandtaishi.com/");
+			webView.loadUrl("");
 	}
 	
 	@Override
@@ -209,11 +212,6 @@ public class WebViewClientCallback extends WebViewClient implements TextToSpeech
 			"preElement = event.srcElement;"+
 			"android.speak(preElement.innerText);"+
 
-			"console.log('AAAAAAA' + allElements[30].innerText);"+
-
-//			"android.speak(allElements[30].innerText);"+
-
-		//		"setTimeout("+ onMouseUpUnhighlight +", 1500)" +
 		"}";
 	
 	
@@ -232,6 +230,11 @@ public class WebViewClientCallback extends WebViewClient implements TextToSpeech
 				"console.log('WOOOOOOOO' + allElements);"+
 
 
+				"function clearHighlight(event)"+
+				"{"+
+				"console.log('clearHighlight');"+
+				"preElement.nextElementSibling.style.background='';"+
+				"}"+
 
 				"var array = [];"+
 				"for (var i = 0; i < allElements.length; i++) {" +

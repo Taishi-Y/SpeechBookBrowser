@@ -101,7 +101,7 @@ public class TalkingBrowserActivity extends AppCompatActivity implements View.On
 
 		webView.loadUrl("http://freenovelsonline.net/red-queen/page-1-1025975.html");
 
-
+//		https://en.wikipedia.org/wiki/Scribd
 
 		webView.setOnTouchListener(new View.OnTouchListener() {
 			public boolean onTouch(View view, MotionEvent event) {
